@@ -1,0 +1,45 @@
+//Tabela que define Alugado, Disponivel, Indisponivel, Manutenção.
+CREATE TABLE STATUS (
+	id_status INT PRIMARY KEY,
+	nome_status VARCHAR (255)
+);
+
+//Tabela que define qual é o tipo do veículo, Avião, Carro, Moto, Trem, Caminhão.
+CREATE TABLE TIPO (
+	id_tipo INT PRIMARY KEY,
+	nome_tipo VARCHAR (255)
+);
+
+//Tabela que define qual o fabricante.
+CREATE TABLE FABRICANTE (
+	id_fabricante INT PRIMARY KEY,
+	nome_fabricante VARCHAR (255)
+);
+
+//Tabela que define o modelo do veículo.
+CREATE TABLE MODELO (
+	id_modelo INT PRIMARY KEY,
+	id_tipo INT,
+	id_fabricante INT,
+	FOREIGN KEY (id_tipo) REFERENCES TIPO(id_tipo),
+	FOREIGN KEY (id_fabricante) REFERENCES FABRICANTE(id_fabricante)
+);
+
+//Tabela que contém os veículos da empresa
+CREATE TABLE VEICULO (
+	id_placa VARCHAR(255) PRIMARY KEY,
+	nome_veiculo VARCHAR (255),
+	id_modelo INT,
+	ano INT,
+	id_status INT,
+	FOREIGN KEY (id_modelo) REFERENCES MODELO(id_modelo),
+	FOREIGN KEY (id_status) REFERENCES STATUS(id_status)
+);
+
+
+//Tabela que contém o usuário
+CREATE TABLE USUARIO (
+	id_usuario INT AUTO_INCREMENT PRIMARY KEY,
+	nome_usuario VARCHAR (255),
+	senha_usuario VARCHAR (255)
+);

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF8">
+    </head>
+    <body>
+        <div>
+            <form action='../Controller/User/C.php' required='required' method='POST'>
+                <h3>Adicionar:</h3>
+                Usuário: <input name='username'><br>
+                Senha <input type='password' name='password'><br>
+                <button type='submit'>Adicionar</button>
+            </form>
+        </div>
+        
+        <div>
+            <form action='../Controller/User/U.php' required='required' method='POST'>
+                <h3>Atualizar:</h3>
+                ID: <input name='id'><br>
+                Usuário: <input name='username'><br>
+                Senha <input type='password' name='password'><br>
+                <button type='submit'>Atualizar</button>
+            </form>
+        </div>
+        
+        <div>
+            <form action='../Controller/User/D.php' required='required' method='POST'>
+                <h3>Remover:</h3>
+                ID: <input name='id'><br>
+                <button type='submit'>Remover</button>
+            </form>
+        </div>
+        
+        <div>
+            <h3>Listar:</h3>
+            <form action='../Controller/User/R.php'required='required' method='GET'>
+                <button type="submit">Listar</button>
+            </form>
+        </div>
+        <br><br><a href="../View/Control.html">Voltar</a>
+    </body>
+</html>

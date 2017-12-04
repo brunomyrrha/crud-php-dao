@@ -1,0 +1,11 @@
+Alunos:
+Bruno Fernandes
+Pedro Lana
+
+INSTRUÇÕES:
+
+1. Criar as bases de dados para um esquema chamado 'AUTOCAR';
+2. Utilizar os comandos do arquivo: query_criacao_bd.txt para criar as tabelas.
+3. Em seguida preencher as bases conforme arquivo: query_cadastros_basicos.txt para popular a tabela inicial.
+
+O usuário padrão para testes é: user: teste / pass: teste.
